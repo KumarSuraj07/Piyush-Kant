@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Dr. Piyush Kant</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f7fc;
+        color: #333;
+    }
+    header {
+        background: #004d99;
+        color: #fff;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    header h1 {
+        margin: 0;
+        font-weight: 700;
+        font-size: 2.2em;
+    }
+    header p {
+        margin: 5px 0 0;
+        font-size: 3em;
+        color: #e0e0e0;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .contact-card, .map-card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        flex: 1 1 500px;
+    }
+    h2 {
+        color: #004d99;
+        margin-top: 0;
+    }
+    .contact-info p {
+        margin: 8px 0;
+        font-size: 16px;
+    }
+    .contact-info a {
+        color: #004d99;
+        text-decoration: none;
+    }
+    .contact-info a:hover {
+        text-decoration: underline;
+    }
+    .map-card iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 350px;
+        border: 0;
+        border-radius: 12px;
+    }
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+    .contact-form textarea {
+        resize: vertical;
+    }
+    .contact-form button {
+        padding: 15px 20px;
+        background: #004d99;
+        color: #fff;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+        background: #003366;
+    }
+    @media(max-width: 900px){
+        .container {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Contact Me</h1>
+    <p>Dr. Piyush Kant</p>
+</header>
+
+<div class="container">
+
+    <!-- Contact Card -->
+    <div class="contact-card">
+        <h2>Contact Information</h2>
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:piyushkant@iitk.ac.in">piyush.kant@example.com</a></p>
+            <p><strong>Phone:</strong> +91-512-259-2308</p>
+            <p><strong>Address:</strong> ESB-2,605 IIT-Kanpur, Uttar Pradesh,208016</p>
+        </div>
+
+        <h2>Send a Message</h2>
+        <div class="contact-form">
+            <form action="mailto:piyushkant@iitk.ac.in" method="get" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Map Card -->
+    <div class="map-card">
+        <h2>Our Location</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d10097.19454541269!2d80.21709677131962!3d26.52343696422073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x399c3728fc77e291%3A0x6a561ef18cd828fd!2sDepartment%20of%20Cognitive%20Science%2CESB-2(Engineering%20Sciences%20Building%20-2)%2C%20Academic%20Area%2CIIT%20Kanpur!3m2!1d26.5153213!2d80.2331657!4m5!1s0x399c3728fc77e291%3A0x6a561ef18cd828fd!2sG68M%2B47F%20Department%20of%20Cognitive%20Science%2CESB-2(Engineering%20Sciences%20Building%20-2)%2C%20Academic%20Area%2CIIT%20Kanpur%2C%20Kalyanpur%2C%20Kanpur%2C%20Uttar%20Pradesh%20208016!3m2!1d26.5153213!2d80.2331657!5e0!3m2!1sen!2sin!4v1760611116602!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+</div>
+
+</body>
+</html>
