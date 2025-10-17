@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piyush Kant - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="simple-animations.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -14,7 +15,10 @@
     <!-- Navigation -->
 <nav class="navbar">
     <div class="nav-container">
-        <div class="nav-logo"><img src="" alt=""></div>
+        <div class="nav-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/IIT_Kanpur_Logo.svg/1200px-IIT_Kanpur_Logo.svg.png" alt="IIT Kanpur" class="logo-img">
+            <!-- <span class="logo-text">IIT Kanpur</span> -->
+        </div>
         <div class="hamburger">
             <span></span>
             <span></span>
@@ -23,16 +27,30 @@
         <ul class="nav-menu">
             <li><a href="#home" class="nav-link">Home</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#education" class="nav-link">Education</a></li>
-            <li><a href="#experience" class="nav-link">Experience</a></li>
-            <li><a href="#research" class="nav-link">Research</a></li>
-            <li><a href="#students" class="nav-link">Students</a></li>    
-            <li><a href="#labs" class="nav-link">Labs</a></li> <!-- ✅ Fixed -->
-            <li><a href="#projects" class="nav-link">Projects</a></li> <!-- ✅ Fixed -->
-            <li><a href="#courses" class="nav-link">Courses</a></li>
-            <li><a href="#awards" class="nav-link">Awards</a></li>
-            <li><a href="#opportunities" class="nav-link">Opportunities</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Profile <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#education" class="dropdown-link">Education</a></li>
+                    <li><a href="#experience" class="dropdown-link">Experience</a></li>
+                    <li><a href="#awards" class="dropdown-link">Awards</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Research <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#research" class="dropdown-link">Research Interests</a></li>
+                    <li><a href="#labs" class="dropdown-link">Labs</a></li>
+                    <li><a href="#projects" class="dropdown-link">Projects</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle">Academic <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#students" class="dropdown-link">Students</a></li>
+                    <li><a href="#courses" class="dropdown-link">Courses</a></li>
+                    <li><a href="#opportunities" class="dropdown-link">Opportunities</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </nav>
@@ -120,30 +138,155 @@
             <!-- PhD Students -->
             <div class="student-category">
                 <h3>Ph.D. Scholars</h3>
-                <ul class="student-list">
-                    <li><strong>Vivek Chaudhary</strong> – Research on EV Charging</li>
-                    <li><strong>Nilesh Pandey</strong> – Research on EV Charging</li>
-                    <li><strong>Ashish Gupta</strong> – Research on EV Charging</li>
-                </ul>
+                <div class="flip-cards-grid">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/demo.png" alt="Vivek Chaudhary">
+                                <h4>Vivek Chaudhary</h4>
+                                <p>Ph.D. Scholar</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Vivek Chaudhary</h4>
+                                <p><strong>Research:</strong> EV Charging Systems</p>
+                                <p><strong>Year:</strong> 2nd Year</p>
+                                <p><strong>Focus:</strong> Fast charging algorithms and battery management systems</p>
+                                <p><strong>Email:</strong> vivek@iitk.ac.in</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/demo.png" alt="Nilesh Pandey">
+                                <h4>Nilesh Pandey</h4>
+                                <p>Ph.D. Scholar</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Nilesh Pandey</h4>
+                                <p><strong>Research:</strong> EV Charging Infrastructure</p>
+                                <p><strong>Year:</strong> 3rd Year</p>
+                                <p><strong>Focus:</strong> Grid integration and smart charging solutions</p>
+                                <p><strong>Email:</strong> nilesh@iitk.ac.in</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/demo.png" alt="Ashish Gupta">
+                                <h4>Ashish Gupta</h4>
+                                <p>Ph.D. Scholar</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Ashish Gupta</h4>
+                                <p><strong>Research:</strong> Wireless EV Charging</p>
+                                <p><strong>Year:</strong> 1st Year</p>
+                                <p><strong>Focus:</strong> Inductive power transfer systems</p>
+                                <p><strong>Email:</strong> ashish@iitk.ac.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- M.Tech Students -->
             <div class="student-category">
                 <h3>M.Tech Students</h3>
-                <ul class="student-list">
-                    <li><strong>Priya Sharma</strong> – Power Converter Design for EVs</li>
-                    <li><strong>Rohit Gupta</strong> – Grid Integration of Renewable Systems</li>
-                    <li><strong>Manish Kumar</strong> – Control of BLDC Drives</li>
-                </ul>
+                <div class="flip-cards-grid">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/demo.png" alt="Priya Sharma">
+                                <h4>Priya Sharma</h4>
+                                <p>M.Tech Student</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Priya Sharma</h4>
+                                <p><strong>Research:</strong> Power Converter Design for EVs</p>
+                                <p><strong>Year:</strong> 2nd Year</p>
+                                <p><strong>Focus:</strong> High-efficiency DC-DC converters</p>
+                                <p><strong>Email:</strong> priya@iitk.ac.in</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/demo.png" alt="Rohit Gupta">
+                                <h4>Rohit Gupta</h4>
+                                <p>M.Tech Student</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Rohit Gupta</h4>
+                                <p><strong>Research:</strong> Grid Integration of Renewable Systems</p>
+                                <p><strong>Year:</strong> 1st Year</p>
+                                <p><strong>Focus:</strong> Solar PV grid synchronization</p>
+                                <p><strong>Email:</strong> rohit@iitk.ac.in</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/demo.png" alt="Manish Kumar">
+                                <h4>Manish Kumar</h4>
+                                <p>M.Tech Student</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Manish Kumar</h4>
+                                <p><strong>Research:</strong> Control of BLDC Drives</p>
+                                <p><strong>Year:</strong> 2nd Year</p>
+                                <p><strong>Focus:</strong> Sensorless control algorithms</p>
+                                <p><strong>Email:</strong> manish@iitk.ac.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Post-Doctoral Fellows -->
             <div class="student-category">
                 <h3>Post-Doctoral Fellows</h3>
-                <ul class="student-list">
-                    <li><strong>Dr. Deepak Singh</strong> – Advanced Motor Control Systems</li>
-                    <li><strong>Dr. Priyankar Roy</strong> – High-Efficiency Power Converters</li>
-                </ul>
+                <div class="flip-cards-grid">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/demo.png" alt="Dr. Deepak Singh">
+                                <h4>Dr. Deepak Singh</h4>
+                                <p>Post-Doc Fellow</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Dr. Deepak Singh</h4>
+                                <p><strong>Research:</strong> Advanced Motor Control Systems</p>
+                                <p><strong>Experience:</strong> 3 years</p>
+                                <p><strong>Focus:</strong> AI-based motor control</p>
+                                <p><strong>Email:</strong> deepak@iitk.ac.in</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/demo.png" alt="Dr. Priyankar Roy">
+                                <h4>Dr. Priyankar Roy</h4>
+                                <p>Post-Doc Fellow</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Dr. Priyankar Roy</h4>
+                                <p><strong>Research:</strong> High-Efficiency Power Converters</p>
+                                <p><strong>Experience:</strong> 2 years</p>
+                                <p><strong>Focus:</strong> Wide bandgap semiconductors</p>
+                                <p><strong>Email:</strong> priyankar@iitk.ac.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -156,27 +299,30 @@
         <h2 class="section-title">🧪 Research Labs</h2>
         <div class="labs-content">
             
-            <div class="lab-category">
+            <div class="lab-card">
                 <h3>Power Electronics & Drives Lab</h3>
-                <ul class="lab-list">
+                <p>Advanced research facility for motor control and power conversion systems.</p>
+                <ul>
                     <li>EV Motor Testing and Control Systems</li>
                     <li>DC-DC Converters and Inverter Prototypes</li>
                     <li>BLDC and PMSM Drive Controllers</li>
                 </ul>
             </div>
 
-            <div class="lab-category">
+            <div class="lab-card">
                 <h3>Renewable Energy Systems Lab</h3>
-                <ul class="lab-list">
+                <p>Cutting-edge equipment for sustainable energy research and development.</p>
+                <ul>
                     <li>Solar PV Characterization Setup</li>
                     <li>MPPT and Grid Integration Experiments</li>
                     <li>Hybrid Energy Management Studies</li>
                 </ul>
             </div>
 
-            <div class="lab-category">
+            <div class="lab-card">
                 <h3>Embedded Systems & IoT Lab</h3>
-                <ul class="lab-list">
+                <p>Modern digital control and monitoring systems for smart applications.</p>
+                <ul>
                     <li>STM32 & TI C2000 MCU Development Boards</li>
                     <li>IoT-based Power Monitoring Platforms</li>
                     <li>Data Acquisition & Control Systems</li>
@@ -186,39 +332,80 @@
         </div>
     </div>
 </section>
-<!-- Projects Section -->
+<!-- Projects Section - Modern Carousel -->
 <section id="projects" class="projects">
     <div class="container">
         <h2 class="section-title">💡 Research & Development Projects</h2>
-        <div class="projects-content">
-
-            <div class="project-category">
-                <h3>Ongoing Projects</h3>
-                <ul class="project-list">
-                    <li><strong>EV Fast Charging Network</strong> – Smart grid-integrated fast charging systems.</li>
-                    <li><strong>Battery Management System (BMS)</strong> – AI-based battery health prediction.</li>
-                    <li><strong>Solar-Wind Hybrid Converter</strong> – Multi-input DC-DC converter design.</li>
-                </ul>
+        <div class="projects-carousel">
+            <div class="projects-carousel-container">
+                <!-- Slide 1: EV & Charging Systems -->
+                <div class="projects-carousel-slide">
+                    <div class="projects-slide-content">
+                        <h3>EV & Charging Systems</h3>
+                        <p>Advanced electric vehicle technologies focusing on fast charging networks, battery management systems, and smart grid integration for sustainable transportation.</p>
+                        <div class="projects-features">
+                            <div class="projects-feature-item">
+                                <span class="projects-feature-icon">🚗</span>
+                                <span class="projects-feature-text">EV Fast Charging Network</span>
+                            </div>
+                            <div class="projects-feature-item">
+                                <span class="projects-feature-icon">🔋</span>
+                                <span class="projects-feature-text">Battery Management System</span>
+                            </div>
+                            <div class="projects-feature-item">
+                                <span class="projects-feature-icon">🔌</span>
+                                <span class="projects-feature-text">Wireless Power Transfer</span>
+                            </div>
+                            <div class="projects-feature-item">
+                                <span class="projects-feature-icon">⚙️</span>
+                                <span class="projects-feature-text">Low-Cost BLDC Drive</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects-slide-visual">
+                        <div class="projects-icon">🚗</div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2: Renewable Energy -->
+                <div class="projects-carousel-slide">
+                    <div class="projects-slide-content">
+                        <h3>Renewable Energy Systems</h3>
+                        <p>Innovative solutions for renewable energy integration including hybrid converters, smart energy monitoring, and grid synchronization technologies.</p>
+                        <div class="projects-features">
+                            <div class="projects-feature-item">
+                                <span class="projects-feature-icon">🌱</span>
+                                <span class="projects-feature-text">Solar-Wind Hybrid Converter</span>
+                            </div>
+                            <div class="projects-feature-item">
+                                <span class="projects-feature-icon">📊</span>
+                                <span class="projects-feature-text">Smart Energy Meter</span>
+                            </div>
+                            <div class="projects-feature-item">
+                                <span class="projects-feature-icon">🌍</span>
+                                <span class="projects-feature-text">Grid Integration</span>
+                            </div>
+                            <div class="projects-feature-item">
+                                <span class="projects-feature-icon">📱</span>
+                                <span class="projects-feature-text">IoT Monitoring</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects-slide-visual">
+                        <div class="projects-icon">🌱</div>
+                    </div>
+                </div>
             </div>
-
-            <div class="project-category">
-                <h3>Completed Projects</h3>
-                <ul class="project-list">
-                    <li><strong>Smart Energy Meter</strong> – IoT-based real-time monitoring system.</li>
-                    <li><strong>Low-Cost BLDC Drive</strong> – Controller for 2kW EV application.</li>
-                    <li><strong>DC Microgrid Prototype</strong> – Renewable-integrated DC power system.</li>
-                </ul>
+            
+            <!-- Carousel Controls -->
+            <div class="projects-carousel-controls">
+                <button class="projects-carousel-btn prev">‹</button>
+                <div class="projects-carousel-indicators">
+                    <div class="projects-indicator active"></div>
+                    <div class="projects-indicator"></div>
+                </div>
+                <button class="projects-carousel-btn next">›</button>
             </div>
-
-            <div class="project-category">
-                <h3>Student Innovation Projects</h3>
-                <ul class="project-list">
-                    <li><strong>Autonomous Drone</strong> – Solar-assisted UAV for environmental monitoring.</li>
-                    <li><strong>Smart Charger</strong> – Adaptive power supply with IoT control.</li>
-                    <li><strong>Wireless Power Transfer</strong> – Inductive charging for small EVs.</li>
-                </ul>
-            </div>
-
         </div>
     </div>
 </section>
@@ -229,33 +416,34 @@
     <section id="education" class="education">
         <div class="container">
             <h2 class="section-title">🎓 Education</h2>
-            <div class="education-timeline">
-                <div class="education-item">
-                    <div class="education-content">
-                        <div class="education-year">2020</div>
+            <div class="timeline-container">
+                <div class="timeline-progress"></div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020</div>
                         <h3>Ph.D. in Electrical Engineering</h3>
                         <h4>Indian Institute of Technology Delhi, India</h4>
-                        <p class="specialization">Specialization: Power Electronics, Electrical Machines and Drives
-                            (PEEMD)</p>
+                        <p class="specialization">Specialization: Power Electronics, Electrical Machines and Drives (PEEMD)</p>
                         <p><strong>Thesis Supervisor:</strong> Prof. Bhim Singh</p>
-                        <p><strong>Thesis:</strong> Power Quality Improvement in Multi-Pulse Converter Fed Multilevel
-                            Inverter Based Induction Motor Drives</p>
+                        <p><strong>Thesis:</strong> Power Quality Improvement in Multi-Pulse Converter Fed Multilevel Inverter Based Induction Motor Drives</p>
                     </div>
                 </div>
-                <div class="education-item">
-                    <div class="education-content">
-                        <div class="education-year">2015</div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
                         <h3>M.Tech in Electrical Engineering</h3>
                         <h4>Motilal Nehru National Institute of Technology Allahabad, India</h4>
                         <p class="specialization">Specialization: Power Electronics and Drives</p>
                         <p><strong>Thesis Supervisor:</strong> Prof. Paulson Samuel</p>
-                        <p><strong>Thesis:</strong> Analysis and Implementation of Multicarrier Modulation for Marx
-                            multilevel Inverter</p>
+                        <p><strong>Thesis:</strong> Analysis and Implementation of Multicarrier Modulation for Marx multilevel Inverter</p>
                     </div>
                 </div>
-                <div class="education-item">
-                    <div class="education-content">
-                        <div class="education-year">2012</div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2012</div>
                         <h3>B.Tech in Electrical Engineering</h3>
                         <h4>National Institute of Technology Agartala, India</h4>
                         <p><strong>Thesis Supervisor:</strong> Prof. Ajoy Kumar Chakraborty</p>
@@ -270,17 +458,20 @@
     <section id="experience" class="experience">
         <div class="container">
             <h2 class="section-title">💼 Experience</h2>
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="experience-content">
-                        <div class="experience-period">May 2022 - Present</div>
+            <div class="timeline-container">
+                <div class="timeline-progress"></div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">May 2022 - Present</div>
                         <h3>Assistant Professor</h3>
                         <h4>Indian Institute of Technology Kanpur, India</h4>
                     </div>
                 </div>
-                <div class="experience-item">
-                    <div class="experience-content">
-                        <div class="experience-period">March 2020 - April 2022</div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">March 2020 - April 2022</div>
                         <h3>Control Engineer</h3>
                         <h4>R&D Department, Danfoss Drives, Chennai, India</h4>
                     </div>
@@ -289,45 +480,109 @@
         </div>
     </section>
 
-    <!-- Research Interests Section -->
+    <!-- Research Interests Section - Modern Carousel -->
     <section id="research" class="research">
         <div class="container">
             <h2 class="section-title">🔬 Research Interests</h2>
-            <div class="research-images">
-                <div class="research-image-item">
-                    <img src="https://home.iitk.ac.in/~piyushkant/images/HW.jpg" alt="Hardware Setup" class="research-img">
+            <div class="research-carousel">
+                <div class="carousel-container">
+                    <!-- Slide 1: Power Electronics -->
+                    <div class="carousel-slide">
+                        <div class="slide-content">
+                            <h3>Power Electronics</h3>
+                            <p>Advanced research in multi-level inverters, AC-DC converters, and modulation techniques for high-power applications in industrial and automotive sectors.</p>
+                            <div class="research-features">
+                                <div class="feature-item">
+                                    <span class="feature-icon">⚡</span>
+                                    <span class="feature-text">Multi-level Inverters</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🔄</span>
+                                    <span class="feature-text">AC-DC Converters</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">📊</span>
+                                    <span class="feature-text">Modulation Techniques</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">⚙️</span>
+                                    <span class="feature-text">Medium Voltage Drives</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="research-icon">⚡</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2: Electric Vehicle Systems -->
+                    <div class="carousel-slide">
+                        <div class="slide-content">
+                            <h3>Electric Vehicle Systems</h3>
+                            <p>Cutting-edge research in EV drive systems, battery management, charging infrastructure, and energy-efficient motor control algorithms.</p>
+                            <div class="research-features">
+                                <div class="feature-item">
+                                    <span class="feature-icon">🚗</span>
+                                    <span class="feature-text">EV Drive Systems</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🔋</span>
+                                    <span class="feature-text">Battery Management</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🔌</span>
+                                    <span class="feature-text">Charging Infrastructure</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🎯</span>
+                                    <span class="feature-text">Motor Control</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="research-icon">🚗</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3: Electrical Machines -->
+                    <div class="carousel-slide">
+                        <div class="slide-content">
+                            <h3>Electrical Machines & Drives</h3>
+                            <p>Comprehensive research in synchronous machines, induction motors, and advanced control strategies for industrial automation and renewable energy.</p>
+                            <div class="research-features">
+                                <div class="feature-item">
+                                    <span class="feature-icon">🔄</span>
+                                    <span class="feature-text">Synchronous Machines</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">⚙️</span>
+                                    <span class="feature-text">Induction Motors</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🎛️</span>
+                                    <span class="feature-text">Control Algorithms</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-icon">🌱</span>
+                                    <span class="feature-text">Renewable Integration</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="research-icon">⚙️</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="research-image-item">
-                    <img src="https://home.iitk.ac.in/~piyushkant/images/H6001011_1.png" alt="Circuit Diagram" class="research-img">
-                </div>
-                <div class="research-image-item">
-                    <img src="https://home.iitk.ac.in/~piyushkant/images/tek00077.png" alt="Oscilloscope Waveform" class="research-img">
-                </div>
-            </div>
-            <div class="research-grid">
-                <div class="research-item">
-                    <div class="research-number">01</div>
-                    <h3>Multi-winding transformers for multi-pulse AC-DC converters</h3>
-                </div>
-                <div class="research-item">
-                    <div class="research-number">02</div>
-                    <h3>Multi-level inverters for medium voltage/power applications</h3>
-                </div>
-                <div class="research-item">
-                    <div class="research-number">03</div>
-                    <h3>Modulation techniques for voltage source inverters</h3>
-                </div>
-                <div class="research-item">
-                    <div class="research-number">04</div>
-                    <h3>Medium voltage drives</h3>
-                </div>
-                <div class="research-item">
-                    <div class="research-number">05</div>
-                    <h3>Electrical machines and drives</h3>
-                </div>
-                <div class="research-item">
-                    <div class="research-number">06</div>
-                    <h3>Electric vehicle drive system</h3>
+                
+                <!-- Carousel Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev">‹</button>
+                    <div class="carousel-indicators">
+                        <div class="indicator active"></div>
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                    </div>
+                    <button class="carousel-btn next">›</button>
                 </div>
             </div>
         </div>
@@ -423,7 +678,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">📞 Get In Touch</h2>
             <div class="contact-content">
@@ -451,7 +706,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer class="footer">
@@ -460,7 +715,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="simple-animations.js"></script>
+    <script src="research-carousel.js"></script>
 </body>
-
 </html>
